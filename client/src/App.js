@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import request from 'superagent';
+import PromiseDemo from './PromiseDemo';
 
 function setTO(ms) {
   return new Promise((resolve, reject) => {
@@ -82,6 +83,7 @@ superAgentGetWithPromise('https://swapi.co/api/people/1').then(response => {
         <button onClick={() => this.increment(this.state.counter)}>Increment</button>
         {this.state.counter}
         <div>{this.state.message}</div>
+        <PromiseDemo />
       </div>
     );
   }
